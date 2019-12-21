@@ -9,6 +9,7 @@
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: 60px;
+  transition: 0.5s;
 }
 
 .sidebar a {
@@ -39,14 +40,15 @@
   left: 15px;
   z-index: 999;
   cursor: pointer;
-  background-color: #111;
-  color: white;
+  color: hotpink;
   padding: 10px 15px;
   border: none;
+  transition: 0.5s;
 }
 
 .openbtn:hover {
-  background-color: #444;
+  background-color: #111;
+  color: hotpink;
 }
 
 .main {
@@ -54,6 +56,9 @@
   padding: 16px;
 }
 
+.view {
+  margin-left: 3vw;
+}
 
 @media screen and (max-height: 450px) {
   .sidebar {padding-top: 15px;}

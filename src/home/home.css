@@ -1,0 +1,9 @@
+.container {
+	display: flex;
+
+}
+
+.button-section {
+	margin-left: 3vw;
+	width: 20vw;
+}

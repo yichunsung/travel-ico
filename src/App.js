@@ -6,13 +6,6 @@ import Home from './home'
 
 const { useState } = React;
 
-const open = {
-  width: '250px'
-}
-const close = {
-  width: '0px'
-}
-
 function App() {
   const [sideBarShow, setSideBarShow] = useState(false);
 
@@ -26,10 +19,6 @@ function App() {
   }
   */
 
-  let closeNav = ()=> {
-    setSideBarShow(false)
-  }
-
   let openOrCloseNav = ()=> {
     if (sideBarShow) {
       setSideBarShow(false)
@@ -37,9 +26,10 @@ function App() {
       setSideBarShow(true)
     }
   } 
-  
-  let d = [];
+
   /*
+  let d = [];
+  
   for (let i = 0; i < arrayData.length; i++) {
     d.push(<div>id = { arrayData[i]} </div>)
   }*/
@@ -50,11 +40,11 @@ function App() {
         <div
           className="sidebar" 
           style={{
-            width: sideBarShow && '250px'
+            width: sideBarShow && '250px',
+            boxShadow: sideBarShow && '3px 3px 10px 3px #333'
           }}>
           <a href="#">About</a>
-          <a href="#">Services</a>
-          <a href="#">Clients</a>
+          <a href="#">Create</a>
           <a href="#">Contact</a>
         </div>
         <div className="openbtn" onClick={ ()=>{ openOrCloseNav() } }>☰</div>  
@@ -64,7 +54,9 @@ function App() {
             marginLeft: sideBarShow && '250px'
           }}
         >
-          <Route path="/" component={Home} />
+          <main className="view">
+            <Route path="/" component={Home} />
+          </main>
         </div>
       </div>
      </Router>
